@@ -35,6 +35,3 @@ set noerrorbells
 set modelines=0
 
 execute pathogen#infect()
-
-" Give a shortcut key to NERD Tree
-map <F2> :NERDTreeToggle<CR>
