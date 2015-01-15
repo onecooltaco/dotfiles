@@ -1,0 +1,36 @@
+# bundle ID	UTI or URL scheme	role
+############################################
+org.vim.MacVim	public.data		all
+org.vim.MacVim	public.unix-executable	all
+org.vim.MacVim	.sh			all
+org.vim.MacVim	.patch			editor
+org.vim.MacVim	public.text		all
+org.vim.MacVim	.txt			all
+org.vim.MacVim	.md			all
+org.vim.MacVim	.pl			all
+org.vim.MacVim	.perl			all
+org.vim.MacVim	.py			all
+org.vim.MacVim	.rb			all
+org.vim.MacVim	.pp			all
+org.vim.MacVim	public.perl-script	all
+org.vim.MacVim	public.python-script	all
+org.vim.MacVim	public.ruby-script	all
+org.vim.MacVim	public.shell-script	all
+org.vim.MacVim	public.patch-file	all
+org.vim.MacVim	public.plain-text	all
+org.vim.MacVim	public.script		all
+org.vim.MacVim	public.ksh-script	all
+org.vim.MacVim	public.php-script	all
+org.vim.MacVim	public.csh-script	all
+org.vim.MacVim	public.zsh-script	all
+org.vim.MacVim	public.json		all
+org.vim.MacVim	public.html		editor
+org.vim.MacVim	public.css		editor
+org.vim.MacVim	public.xhtml		editor
+org.vim.MacVim	public.xml		editor
+
+org.vim.MacVim	public.utf16-external-plain-text		all
+org.vim.MacVim	public.utf16-plain-text				all
+org.vim.MacVim	public.utf8-plain-text				all
+org.vim.MacVim	public.utf8-tab-separated-values-text		all
+
