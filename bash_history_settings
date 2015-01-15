@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+#
+# !!! DO NOT EDIT !!!
+# Managed by Puppet
+#
+# This file provides bash history settings. It is loaded/sourced in
+# ~/.bashrc and ~/.bash_profile with `source
+# $HOME/.my_bash_history_settings'.
+
+# Local Variables:
+# mode: shell-script
+# End:
+
+
