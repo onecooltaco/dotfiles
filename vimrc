@@ -1,3 +1,6 @@
+execute pathogen#infect()
+call pathogen#helptags()
+
 " Make Vim more useful
 set nocompatible  " We don't want vi compatibility.
 
@@ -5,7 +8,7 @@ set nocompatible  " We don't want vi compatibility.
 set clipboard=unnamed
 
 " Set color scheme!¬
-colorscheme candy
+colorscheme neon
 
 " Optimize for fast terminal connections
 set ttyfast
@@ -34,4 +37,21 @@ set noerrorbells
 
 set modelines=0
 
-execute pathogen#infect()
+filetype plugin on
+
+" turn on line numbering
+set number
+
+" turn on our statusline.
+set statusline=[%n]\ %<" Buffer number, truncate here if too long.
+set statusline+=%F\ \ \ " Path to the file
+set statusline+=[%M%R%H%W%Y]" File Modified flag|Readonly flag|Help buffer flag|Preview window flag|Type of file in the buffer
+set statusline+=[%{&ff}]\ \ "
+set statusline+=%=\ " Switch to the right side
+set statusline+=line:%l/%L\ " Current line/Total Lines
+set statusline+=col:%c\ \ \ " Current column
+set statusline+=%p%%\ \ \ " Precentage thought file
+set statusline+=@%{strftime(\"%H:%M:%S\")} "Time in hours:minutes:seconds.
+
+set laststatus=2
+  
