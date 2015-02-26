@@ -33,8 +33,8 @@ set number
 set ruler
 
 " Set color scheme!¬
-colorscheme hemisu
 set background=light
+"colorscheme hemisu
 
 " turn on our statusline.
 "set statusline=[%n]\ %<" Buffer number, truncate here if too long.
