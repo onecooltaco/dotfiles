@@ -18,6 +18,8 @@ if [ -x /usr/bin/lesspipe ]; then
 fi
 
 # PATH SETTINGS ---------------------------------------------------------------
+# Ensure user-installed binaries take precedence
+[ -d "/usr/local/bin" ]  && PATH=/usr/local/bin:$PATH
 [ -d "/usr/local/sbin" ]  && PATH=/usr/local/sbin:$PATH
 # set PATH so it includes user's private bin if it exists
 [ -d "$HOME/bin" ]  && PATH="$HOME/bin:$PATH"
@@ -25,4 +27,5 @@ fi
 export PATH
 
 # * ~/.profile_local can be used for other settings you don’t want to commit elsewhere.
-[[ -f ${HOME}/.profile_local ]] && source ${HOME}/.profile_local
+[ -f "${HOME}/.profile_local" ] && source ${HOME}/.profile_local
+
