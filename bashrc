@@ -18,6 +18,7 @@ fi
 OS=`uname`
 
 [[ $PATH = *local/bin* ]] || PATH=$PATH:/usr/local/bin
+export PATH
 
 # Shell Completion ------------------------------------------------------------
 complete -d cd
