@@ -106,14 +106,25 @@ alias sudo='sudo '
 [[ -x /usr/libexec/PlistBuddy ]] && alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # Misc ------------------------------------------------------------------------
-if [[ "$OS" = "Darwin" && "$(sw_vers -productVersion)" == 10.6.* ]]; then
+if [[ "$OS" = "Darwin" ]]; then
+  if [[ "$(sw_vers -productVersion)" == 10.6.* ]]; then
     export ARCHFLAGS="-arch i386 -arch x86_64"
+  else
+	export ARCHFLAGS="-arch x86_64"
+  fi
 fi
 
 # Bring in the other files ----------------------------------------------------
 [[ -s /etc/bash_completion ]] && source /etc/bash_completion
 [[ -s ~/.bash_prompt_settings ]] && source ~/.bash_prompt_settings
 [[ -s ~/.bash_aliases ]] && source ~/.bash_aliases
+## Homebrew formulae bash completion.
+if which brew > /dev/null; then
+  if [ -s $(brew --prefix)/etc/bash_completion.d -a "$(ls -A $(brew --prefix)/etc/bash_completion.d)" ]; then
+    source $(brew --prefix)/etc/bash_completion.d/*
+  fi
+fi
 
 # * ~/.bashrc_local can be used for other settings you don’t want to commit elsewhere.
 [[ -s ~/.bashrc_local ]] && source ~/.bashrc_local
+
