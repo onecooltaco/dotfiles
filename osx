@@ -739,6 +739,12 @@ defaults write com.twitter.twitter-mac ShowFullNames -bool true
 defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
+# Cyberduck.app                                                                 #
+###############################################################################
+# Disable Bounjour in Cyberduck
+defaults write ch.sudo.cyberduck rendezvous.enable false
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
