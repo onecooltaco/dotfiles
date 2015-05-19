@@ -1,0 +1,25 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_history_settings: bash_history_settings
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitattributes: gitattributes
+    ~/.gitconfig: gitconfig
+    ~/.gvimrc: gvimrc
+    ~/.hgignore: hgignore
+    ~/.hushlogin: hushlogin
+    ~/.profile: profile
+    ~/.screenrc: screenrc
+    ~/.vimrc: vimrc
+    ~/.wgetrc: wgetrc
+    ~/.tmux.conf: .tmux.conf
+
+- shell:
+  - ['mkdir -p ~/.vim/{backups,swaps,undo}', Creating vim directory]
+  - [git submodule update --init --recursive, Installing submodules]
+  - 
+    command: sh brew.sh
+    stdout: true
+

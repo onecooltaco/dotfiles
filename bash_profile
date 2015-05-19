@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 #
-# !!! DO NOT EDIT !!!
-# Managed by Puppet
-#
 ##  .bash_profile is for making sure that both the things in .profile and .bashrc
 ##  are loaded for login shells.
 

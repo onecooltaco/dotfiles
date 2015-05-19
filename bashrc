@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 #
-# !!! DO NOT EDIT !!!
-# Managed by Puppet
-#
 ##  .bashrc is for the configuring the interactive Bash usage, like Bash aliases,
 ##  setting your favorite editor, setting the Bash prompt, etc.
 

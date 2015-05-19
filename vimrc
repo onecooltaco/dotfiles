@@ -37,4 +37,9 @@ set viminfo+=! " make sure vim history works
 set modelines=0
 
 filetype plugin on
+let $LOCALFILE=expand("~/.vimrc_local")
+
+if filereadable($LOCALFILE)
+    source $LOCALFILE
+endif
 

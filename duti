@@ -54,10 +54,10 @@ org.vim.MacVim	.pch		all
 org.vim.MacVim	.php		all
 org.vim.MacVim	.pl		all
 org.vim.MacVim	.plist		editor
-org.vim.MacVim	.pp		all	# Puppet files
+org.vim.MacVim	.pp		all
 org.vim.MacVim	.py		all
 org.vim.MacVim	.rb		all
-org.vim.MacVim	.recipe		all	# Autopkg files
+org.vim.MacVim	.recipe		all
 org.vim.MacVim	.sh		all
 org.vim.MacVim	.txt		all
 org.vim.MacVim	.tex		all
