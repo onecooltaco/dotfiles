@@ -118,8 +118,8 @@ fi
 [[ -s ~/.bash_aliases ]] && source ~/.bash_aliases
 ## Homebrew formulae bash completion.
 if which brew > /dev/null; then
-  if [ -s $(brew --prefix)/etc/bash_completion.d -a "$(ls -A $(brew --prefix)/etc/bash_completion.d)" ]; then
-    source $(brew --prefix)/etc/bash_completion.d/*
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
   fi
 fi
 
