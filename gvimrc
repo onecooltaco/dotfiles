@@ -34,7 +34,14 @@ set ruler
 
 " Set color scheme!¬
 set background=light
-"colorscheme hemisu
+colorscheme hemisu
+"set transparency=15
+
+if has("gui_macvim")
+    "set transparency=15
+    set guifont=Inconsolata:h15
+    set antialias
+endif
 
 " turn on our statusline.
 "set statusline=[%n]\ %<" Buffer number, truncate here if too long.
@@ -48,3 +55,4 @@ set background=light
 "set statusline+=@%{strftime(\"%H:%M:%S\")} "Time in hours:minutes:seconds.
 
 set laststatus=2
+
