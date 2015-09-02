@@ -32,6 +32,11 @@ filetype plugin indent on
 set number
 set ruler
 
+" Turn Off Swap Files
+set noswapfile
+set nobackup
+set nowb
+
 " Set color scheme!¬
 set background=light
 colorscheme hemisu
