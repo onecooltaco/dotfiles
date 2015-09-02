@@ -24,6 +24,8 @@ set copyindent    " copy the previous indentation on autoindenting
 set shiftwidth=4  " number of spaces to use for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 
+set nofoldenable  "dont fold by default
+
 set pastetoggle=<F2>
 
 filetype plugin indent on
