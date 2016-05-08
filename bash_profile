@@ -48,7 +48,7 @@ if [ -x /usr/bin/lesspipe ]; then
 	eval `lesspipe`
 fi
 
- PATH SETTINGS ---------------------------------------------------------------
+# PATH SETTINGS ---------------------------------------------------------------
 # Ensure user-installed binaries take precedence
 [ -d "/usr/local/bin" ]  && PATH=/usr/local/bin:$PATH
 [ -d "/usr/local/sbin" ]  && PATH=/usr/local/sbin:$PATH
