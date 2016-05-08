@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 # ~/.osx — Shamelessly stolen from https://mths.be/osx
+OS=`uname`
+if [ "$OS" != 'Darwin' ]; then
+	exit
+fi
 
 # Ask for the administrator password upfront
 sudo -v
