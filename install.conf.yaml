@@ -10,7 +10,6 @@
     ~/.gvimrc: gvimrc
     ~/.hgignore: hgignore
     ~/.hushlogin: hushlogin
-    ~/.profile: profile
     ~/.screenrc: screenrc
     ~/.vimrc: vimrc
     ~/.wgetrc: wgetrc
@@ -22,4 +21,6 @@
   - 
     command: sh brew.sh
     stdout: true
-
+  - 
+    command: sh osx
+    stdout: true
