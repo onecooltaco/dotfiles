@@ -18,8 +18,8 @@
 - shell:
   - ['mkdir -p ~/.vim/{backups,swaps,undo,autoload,bundle}', Creating vim directory]
   - ['curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim', Downloading pathogen.vim]
-  - [git submodule update --init --recursive, Installing submodules]
-  - [git clone https://github.com/pearofducks/ansible-vim ~/.vim/bundle/ansible-vim, Installing ansible-vim]
+  - ['git submodule update --init --recursive', Installing submodules]
+  - ['git clone https://github.com/pearofducks/ansible-vim ~/.vim/bundle/ansible-vim', Installing ansible-vim]
   - 
     command: sh brew.sh
     stdout: true
