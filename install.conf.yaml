@@ -18,6 +18,7 @@
 - shell:
   - ['mkdir -p ~/.vim/{backups,swaps,undo}', Creating vim directory]
   - [git submodule update --init --recursive, Installing submodules]
+  - [git clone https://github.com/pearofducks/ansible-vim ~/.vim/bundle/ansible-vim, Installing ansible-vim]
   - 
     command: sh brew.sh
     stdout: true
