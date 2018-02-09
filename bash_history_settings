@@ -8,4 +8,12 @@
 # mode: shell-script
 # End:
 
+shopt -s histappend           #append to the end of $HISTFILE
+shopt -s cmdhist # save all lines of multiline commands in the same history line with ; separators
 
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTTIMEFORMAT="%A  %Y-%m-%d  [%T %z] "
+export HISTCONTROL=ignoreboth:erasedups
+export HISTIGNORE="pwd:exit:date:* --help"
