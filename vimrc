@@ -98,4 +98,4 @@ set shiftwidth=2
 "To work with  Catppuccin for Vim theme
 set termguicolors
 
-colorscheme catppuccin_latte
+colorscheme catppuccin_mocha
