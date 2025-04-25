@@ -32,5 +32,14 @@ brew install nmap
 brew install rename
 brew install ssh-copy-id
 brew install tree
+brew install dos2unix
+brew install duti
+brew install awscli
+brew install jq
+
+brew install zsh-completions
+brew install zsh-syntax-highlighting
+brew install gh
+brew install pre-commit
 
 # Remove outdated versions from the cellar.brew cleanup
