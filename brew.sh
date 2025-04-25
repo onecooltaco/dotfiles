@@ -10,7 +10,7 @@ fi
 
 # update brew packages
 brew update
-brew upgrade --all
+brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
@@ -22,10 +22,8 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-brew install bash-completion
-
-# Install `wget` with IRI support.
-brew install wget --with-iri
+# Install `wget`.
+brew install wget
 
 brew install lynx
 brew install nmap
@@ -36,10 +34,10 @@ brew install dos2unix
 brew install duti
 brew install awscli
 brew install jq
-
-brew install zsh-completions
-brew install zsh-syntax-highlighting
 brew install gh
 brew install pre-commit
+brew install zsh-completions
+brew install zsh-syntax-highlighting
 
-# Remove outdated versions from the cellar.brew cleanup
+# Remove outdated versions from the cellar.
+brew cleanup
