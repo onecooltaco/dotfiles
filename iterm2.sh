@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
+ROOT_DIR="$(dirname -- "$(stat -f "$0")")"
 TEMP_DIR=$(mktemp -d)
 trap exiting exit
 function exiting() { rm -rf ${TEMP_DIR}; exit; }
@@ -25,3 +26,4 @@ do
 done
 
 defaults write com.googlecode.iterm2 QuitWhenAllWindowsClosed -bool true
+cp -f "${ROOT_DIR}/iterm-profiles.json" ${HOME}/Library/Application\ Support/iTerm2/DynamicProfiles/
