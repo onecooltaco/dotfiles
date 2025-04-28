@@ -9,7 +9,7 @@ fi
 
 for f in gvimrc vimrc; do
 	[[ -f ${HOME}/.${f} ]] && cp ${HOME}/.${f}{,~}
-	cp "${ROOT_DIR}/${f}" ${HOME}/.${f}
+	cp -f "${ROOT_DIR}/${f}" ${HOME}/.${f}
 done
 
 for d in backups swaps pack/plugins/start; do
