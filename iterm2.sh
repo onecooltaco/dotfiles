@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
 set -eu
 
-temp_dir=$(mktemp -d)
+TEMP_DIR=$(mktemp -d)
 trap exiting exit
-function exiting() { rm -rf ${temp_dir}; exit; }
+function exiting() { rm -rf ${TEMP_DIR}; exit; }
 
-if [[ ! -f "$HOME/.iterm2_shell_integration.zsh" ]]; then
-  curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
+if ! mdfind -name 'iTerm.app' &>/dev/null; then
+  brew install --cask iterm2
 fi
 
-mkdir $temp_dir/schemes
-mkdir $temp_dir/tools
-curl -Ls https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/tools/import-scheme.sh > $temp_dir/tools/import-scheme.sh
+mkdir $TEMP_DIR/schemes
+mkdir $TEMP_DIR/tools
+curl -Ls https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/tools/import-scheme.sh > $TEMP_DIR/tools/import-scheme.sh
 
 catppuccin_array=("frappe" "latte" "macchiato" "mocha")
 
 for f in "${catppuccin_array[@]}"
 do
   echo "downloading catppuccin-${f}.itermcolors file..."
-  curl -Ls https://raw.githubusercontent.com/catppuccin/iterm/main/colors/catppuccin-${f}.itermcolors > $temp_dir/schemes/catppuccin-${f}.itermcolors
+  curl -Ls https://raw.githubusercontent.com/catppuccin/iterm/main/colors/catppuccin-${f}.itermcolors > $TEMP_DIR/schemes/catppuccin-${f}.itermcolors
   echo "Processing catppuccin-${f}.itermcolors file..."
   # Import file $f
-  sh $temp_dir/tools/import-scheme.sh catppuccin-${f}.itermcolors
+  sh $TEMP_DIR/tools/import-scheme.sh catppuccin-${f}.itermcolors
 done
+
+defaults write com.googlecode.iterm2 QuitWhenAllWindowsClosed -bool true
