@@ -86,6 +86,8 @@ plugins=(
 #	terraform
 )
 
+zstyle :omz:plugins:iterm2 shell-integration yes
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -114,8 +116,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export JAVA_HOME=$(/usr/libexec/java_home)
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="${HOME}/bin:$PATH"
 
