@@ -32,4 +32,3 @@ alias sudo='sudo '
 
 # * ~/.bashrc_local can be used for other settings you don’t want to commit elsewhere.
 [[ -s ~/.bashrc_local ]] && source ~/.bashrc_local
-
