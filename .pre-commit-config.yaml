@@ -1,0 +1,38 @@
+default_install_hook_types: # Determines hooks installed by `pre-commit install --install-hooks`.
+-   commit-msg
+-   pre-commit
+-   pre-push
+
+fail_fast: true # Stops on first hook failure.
+
+repos:
+-   repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update
+    rev: v0.7.0
+    hooks:
+    -   id: pre-commit-update
+-   repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.0.0
+    hooks:
+    -   id: conventional-pre-commit
+        stages: [commit-msg]
+        args: [--verbose, --no-color] # Failure output helps teach Conventional Commit requirements.
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: end-of-file-fixer
+        exclude: (MANIFEST|FILES)\.json$
+    -   id: trailing-whitespace
+        files: \.(js|rb|md|py|sh|txt|yaml|yml)$
+    -   id: check-json
+        files: \.(json|template)$
+    -   id: check-yaml
+        files: \.(yml|yaml)$
+    -   id: detect-private-key
+    -   id: detect-aws-credentials
+    -   id: mixed-line-ending
+    -   id: check-merge-conflict
+-   repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.7.2
+    hooks:
+    -   id: shellcheck
+#       args: ["--severity=warning"]  # Optionally only show errors and warnings
