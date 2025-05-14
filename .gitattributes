@@ -1,0 +1,44 @@
+# THIS IS ONLY FOR THE dotfiles REPOSITORY.
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+*               text=auto
+
+#
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+*.gitattributes text
+.gitignore      text
+*.md            text diff=markdown
+
+#
+# Exclude files from exporting
+#
+.gitattributes  export-ignore
+.gitignore      export-ignore
+
+#
+# Enable syntax highlighting for files with `.gitattributes` extensions.
+#
+*.gitattributes linguist-language=gitattributes
+*.gitattributes linguist-detectable=true
+*.gitattributes linguist-documentation=false
+
+# Scripts
+*.bash     text eol=lf
+*.sh       text eol=lf
+*.zsh      text eol=l
+
+# Serialisation
+*.json     text
+
+# Documentation
+*.md       text diff=markdown
+*.txt      text
+*README*   text
+
+# RC files (like .babelrc or .eslintrc)
+*.*rc      text eol=lf
+
+# Ignore files (like .npmignore or .gitignore)
+*.*ignore  text
