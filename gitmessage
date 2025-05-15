@@ -1,0 +1,14 @@
+# <type>(<optional scope>): <description> (max 50 characters)
+# types of commits: feat, fix, docs, style, refactor, perf, test and chore
+# Insert a `!` before the `:` to indicate a breaking change
+
+# <optional insert detailed description of changes made in the commit> (wrap at 72 characters)
+
+# <optional insert any additional information, such as references or issue numbers>
+# BREAKING CHANGE: <describe the breaking change>
+
+# Specification: https://www.conventionalcommits.org/en/v1.0.0/#specification
+
+# Note: git will ignore any line starting by #, so you can save your
+# template with these lines and it will not appear in your actual
+# commit message.
