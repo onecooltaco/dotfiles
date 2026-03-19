@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -eu
 
+# Check for Xcode command line tools,
+# Install if needed
+if ! xcode-select -print-path >/dev/null 2>&1; then
+  echo "Installing Xcode Command Line Tools"
+  sudo xcode-select --install
+  exit 1
+fi
+
 # Check for Homebrew,
 # Install if needed
 if test ! "$(which brew)"; then
