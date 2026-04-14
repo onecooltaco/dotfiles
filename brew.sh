@@ -33,17 +33,13 @@ brew install findutils
 # Install `wget`.
 brew install wget
 
+brew install dos2unix
+brew install duti
 brew install lynx
 brew install nmap
 brew install rename
 brew install ssh-copy-id
 brew install tree
-brew install dos2unix
-brew install duti
-brew install awscli
-brew install jq
-brew install gh
-brew install pre-commit
 brew install zsh-completions
 brew install zsh-syntax-highlighting
 
