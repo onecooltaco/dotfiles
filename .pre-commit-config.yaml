@@ -29,6 +29,7 @@ repos:
         files: \.(yml|yaml)$
     -   id: detect-private-key
     -   id: detect-aws-credentials
+        args: [--allow-missing-credentials]
     -   id: mixed-line-ending
     -   id: check-merge-conflict
 -   repo: https://github.com/koalaman/shellcheck-precommit
