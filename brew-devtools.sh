@@ -44,9 +44,10 @@ brew install ansible
 brew install ansible-lint
 
 brew install opentofu
-brew install terraform
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 brew install terraform-docs
-brew install tflint
+brew install terraform-linters/tap/tflint
 brew install tfsec
 brew install trivy
 
