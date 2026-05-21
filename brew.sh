@@ -14,6 +14,10 @@ fi
 if test ! "$(which brew)"; then
   echo "Installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Adding Homebrew to PATH..."
+  echo >> /Users/jleggat/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/jleggat/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 fi
 
 # update brew packages
