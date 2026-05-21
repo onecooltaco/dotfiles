@@ -16,8 +16,16 @@ curl https://raw.githubusercontent.com/halprin/terraform-bbedit-language/master/
 # Apache Configuration Language Module
 curl -L http://daringfireball.net/projects/downloads/Apache_Configuration_1.0.7.zip | bsdtar -xvf- -C "$DIR/"
 
+# BBColors color scheme file Language Module
+curl -L http://daringfireball.net/projects/downloads/BBColors_Scheme_CLM.zip | bsdtar -xvf- -C "$DIR/"
+
 # diff Language Module
 curl -L https://pudge.net/bbedit/Diff.plist > "$DIR/Diff.plist"
 
 # git blame Language Module
 curl -L https://pudge.net/bbedit/GitBlame.plist > "$DIR/GitBlame.plist"
+
+# BBColors command-line tool for saving and loading text color preference schemes for BBEdit
+sudo sh -c "curl -L https://daringfireball.net/projects/downloads/bbcolors_1.0.1.zip | bsdtar -xvf- -C /usr/local/bin/"
+
+sudo chmod +x /usr/local/bin/bbcolors
