@@ -34,6 +34,7 @@ brew install phpstan
 brew install phpunit
 brew install prettier
 brew install pylint
+brew install ruff
 brew install shellcheck
 brew install shellharden
 brew install tidy-html5
