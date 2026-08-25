@@ -37,6 +37,7 @@ brew install pylint
 brew install shellcheck
 brew install shellharden
 brew install tidy-html5
+brew install uv
 brew install yamale
 brew install yamllint
 
