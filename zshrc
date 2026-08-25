@@ -83,7 +83,9 @@ plugins=(
 	github
 	iterm2
 #	kubectl
+	macos
 #	terraform
+	uv
 )
 
 zstyle :omz:plugins:iterm2 shell-integration yes
